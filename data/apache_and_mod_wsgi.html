@@ -1,0 +1,982 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>apache_and_mod_wsgi</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-关于apache和mod_wsgi的部分笔记" class="anchor" href="#%E5%85%B3%E4%BA%8Eapache%E5%92%8Cmod_wsgi%E7%9A%84%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>关于Apache和mod_wsgi的部分笔记</h1>
+
+<p>最近在使用apache和flask的过程中，遇到一些疑惑，于是看了一些关于apache的mod_wsgi的介绍，并在虚拟机中做了些测试，以解决这些疑惑。没有记录详细的测试过程，只记录结论：</p>
+
+<h3>
+<a id="user-content-1-apache的mpm的两种模式-prefork--worker模式" class="anchor" href="#1-apache%E7%9A%84mpm%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F-prefork--worker%E6%A8%A1%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. apache的MPM的两种模式: prefork &amp; worker模式:</h3>
+
+<p><code>prefork</code> 是多进程单线程, 每个进程处理一个客户端连接;</p>
+
+<p><code>worker</code> 是多进程多线程, 每个线程处理一个客户端连接;</p>
+
+<p>在处理进程/线程满的情况下,其他请求,就会在等待队列等待空闲的进程/线程.由于看mod_wsgi的官方文档，里面只提到这2中模式都可以，所以也只考虑用这两种模式。</p>
+
+<h3>
+<a id="user-content-2-如何查看当前用的是哪个模式" class="anchor" href="#2-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E7%9A%84%E6%98%AF%E5%93%AA%E4%B8%AA%E6%A8%A1%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. 如何查看当前用的是哪个模式:</h3>
+
+<pre><code>root@vm:/etc/apache2/mods-enabled# apache2ctl -V
+Server version: Apache/2.4.10 (Debian)
+Server built:   Aug 28 2015 16:28:08
+Server's Module Magic Number: 20120211:37
+Server loaded:  APR 1.5.1, APR-UTIL 1.5.4
+Compiled using: APR 1.5.1, APR-UTIL 1.5.4
+Architecture:   64-bit
+Server MPM:     worker
+  threaded:     yes (fixed thread count)
+    forked:     yes (variable process count)
+</code></pre>
+
+<h3>
+<a id="user-content-3-线程或进程的增长方式" class="anchor" href="#3-%E7%BA%BF%E7%A8%8B%E6%88%96%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%A2%9E%E9%95%BF%E6%96%B9%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. 线程或进程的增长方式</h3>
+
+<p>无论用prefork还是worker模式, 进程增长方式一样. apache的进程增长方式: apache每秒检查一次, 发现需要增长时, 第一秒增加1个进程,第二秒增加2个进程,直到够; 增长的进程数=pow(2,n) n从0开始. </p>
+
+<p><code>服务器启动时候</code> 启动配置中的StartServers个进程, 然后apache每秒检查一次, 如果当前进程数少于最小进程数, 则第一秒增加1个进程, 第二秒增加2个进程, 第三秒增加4个进程, 直到达到最小进程数.</p>
+
+<p><code>在并发比较大,当前进程数不够用时</code> apache也不是马上创建进程, 依然是每秒检查一次,第一次涨1个进程,第二次涨2个进程,直到涨满或符合需求. 所以有时候服务器很空闲，突然多几个请求，客户端等待的响应时间就比较长，正是因为apache处理进程增加需要时间。所以最小最大空闲进程数的设定很重要，在机器性能允许的情况下，可以稍微设置得大点。</p>
+
+<p><code>在并发高峰过去后</code> apache依然每秒检查一次, 发现空闲的进程/线程超过设定的最大空闲数量时,则开始清除多余的空闲进程/线程.</p>
+
+<h3>
+<a id="user-content-4-prefork-和-worker-的配置项意义" class="anchor" href="#4-prefork-%E5%92%8C-worker-%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9%E6%84%8F%E4%B9%89" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. prefork 和 worker 的配置项意义:</h3>
+
+<pre><code>&lt;IfModule mpm_prefork_module&gt;
+    # apache启动时启动多少个进程
+    StartServers      1
+
+    # apache每秒检查一次,如果当前进程数少于MinSpareServers,
+    # 则第一秒创建1个, 第二秒创建2个, 第三秒创建4个,..
+    MinSpareServers   1
+
+    # apache每秒检查一次,如果空闲进程数多于MaxSpareServers,
+    # 也会逐渐kill掉空闲进程.
+    MaxSpareServers  30
+
+    # apache逐渐增长进程数时,不能超过此最大进程数,
+    # 因此这是apache的并发处理数.
+    MaxRequestWorkers     50
+
+    # 一个进程处理多少个请求之后, 自动销毁,避免泄漏.
+    # 设定为0则表示无限;
+    # 建议设定一个相对大的数值, 因为进程的开销比较大,而且apache涨进程需要时间.
+    MaxConnectionsPerChild 0
+
+    # 最大进程数,MaxRequestWorkers不能超过此数值
+    ServerLimit          100
+&lt;/IfModule&gt;
+</code></pre>
+
+<pre><code>&lt;IfModule mpm_worker_module&gt;
+    # apache启动时启动多少个进程
+    StartServers           2
+
+    # apache每秒检查一次,如果当前线程数少于MinSpareThreads,则创建进程
+    # 进程数量遵循pow(2,n)规律;
+    # 每个进程会创建ThreadsPerChild处理线程
+    MinSpareThreads       25
+
+    # apache每秒检查一次,
+    # 如果空闲进程数多于MaxSpareServers,也会逐渐kill掉空闲线程和进程
+    MaxSpareThreads       75
+
+    # 每个进程将创建多少个线程
+    ThreadsPerChild       25
+
+    # 最多MaxRequestWorkers个线程,
+    # MaxRequestWorkers/ThreadsPerChild=最大进程数,
+    # MaxRequestWorkers则是apache处理的最大并发连接数
+    MaxRequestWorkers    150
+
+    # 一个进程处理多少个请求之后, 自动销毁,避免泄漏.
+    # 设置为0则表示无限;
+    # 建议设定一个相对大的数值, 因为进程的开销比较大,而且apache涨进程需要时间.
+    MaxConnectionsPerChild 0
+
+    # 最大的线程数限制,
+    # MaxRequestWorkers不能超过此数值,
+    # 修改此值需要重启apache,不能graceful
+    ThreadLimit           64
+
+    # 最大进程数,
+    # MaxRequestWorkers/ThreadsPerChild=最大进程数, 不能超过此数值
+    ServerLimit          100
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3>
+<a id="user-content-5-virtualhost和apache处理进程或线程的关系" class="anchor" href="#5-virtualhost%E5%92%8Capache%E5%A4%84%E7%90%86%E8%BF%9B%E7%A8%8B%E6%88%96%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%85%B3%E7%B3%BB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. VirtualHost和apache处理进程或线程的关系</h3>
+
+<p>apache的处理进程和线程，是所有VirtualHost共享的。不能独自配置某个虚拟机分配几个处理进程或线程。（或者说，我还没找到配置的方法？）</p>
+
+<h3>
+<a id="user-content-6-关于keepalive" class="anchor" href="#6-%E5%85%B3%E4%BA%8Ekeepalive" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. 关于KeepAlive</h3>
+
+<p>KeepAlive会占用一个连接不释放,直到客户端关闭或服务端超时, 所以空闲的keepalive会降低服务端的并发数.一般情况下，不信任的客户端不直连apache，在前面加个nginx做代理。</p>
+
+<h3>
+<a id="user-content-7-关于access-log中的处理时间" class="anchor" href="#7-%E5%85%B3%E4%BA%8Eaccess-log%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7. 关于access log中的处理时间</h3>
+
+<p>apache的access log, 可以通过配置记录请求的处理时间. 该处理时间, 是apache分配到处理进程/线程之后到http请求全部发送回给客户端的时间, 不包括该请求中等待队列中的等待时间.</p>
+
+<h3>
+<a id="user-content-8-wsgi有2种模式-embedded-vs-daemon" class="anchor" href="#8-wsgi%E6%9C%892%E7%A7%8D%E6%A8%A1%E5%BC%8F-embedded-vs-daemon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8. wsgi有2种模式: Embedded vs Daemon</h3>
+
+<p>在Embedded Mode下:</p>
+
+<ul>
+<li>wsgi application是在apache的进程或线程中运行;</li>
+<li>进程进程数/线程数 是由apache的进程/线程扩展决定,数量比较不可控;</li>
+</ul>
+
+<p>在Daemon Mode下:</p>
+
+<ul>
+<li>wsgi application是独立于apache的进程, apache的进程或线程只是做动态请求的转发代理; 静态文件依然由apache直接返回.</li>
+<li>wsgi application的进程和线程数是固定的;</li>
+<li>wsgi application进程/线程处理完请求后, 返回给apache进程/线程, 则此wsgi application进程/线程可以处理下一个请求; 而该apache的进程/线程,则需要等客户端收取完response才能释放出来处理下一个.</li>
+<li>wsgi application的线程是python的线程,受GIL影响, 所以Wsgi的Thread&amp;Process数量配置:</li>
+</ul>
+
+<blockquote>
+<p>如果是cpu型,则多process,少thread <br>
+如果是io阻塞型,则多thread,少process</p>
+</blockquote>
+
+<h3>
+<a id="user-content-参考资料" class="anchor" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>参考资料：</h3>
+
+<p>GrahamDumpleton 应该是mod_wsgi的作者吧, 他解释的关于wsgi的应该比较权威.</p>
+
+<ul>
+<li><a href="http://www.slideshare.net/GrahamDumpleton/pycon-us-2013-making-apache-suck-less-for-hosting-python-web-applications">http://www.slideshare.net/GrahamDumpleton/pycon-us-2013-making-apache-suck-less-for-hosting-python-web-applications</a></li>
+<li><a href="http://stackoverflow.com/questions/7968840/apache-mod-wsgi-interaction">http://stackoverflow.com/questions/7968840/apache-mod-wsgi-interaction</a></li>
+<li><a href="http://blog.dscpl.com.au/">http://blog.dscpl.com.au/</a></li>
+</ul>
+
+<h3>
+<a id="user-content-测试工具" class="anchor" href="#%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>测试工具：</h3>
+
+<ul>
+<li>用monotor.sh 可监控apache的进程和线程数（会发现每个进程的线程数总是比配置的多2个，那2个非worker线程,他们具体做的事情,可以查看 GrahamDumpleton的blog ）</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c">#!/bin/bash</span>
+cnt=1000
+<span class="pl-k">for</span> <span class="pl-s"><span class="pl-pds">((</span>i<span class="pl-k">=</span><span class="pl-c1">1</span>; i<span class="pl-k">&lt;=</span><span class="pl-smi">$cnt</span>; i<span class="pl-k">++</span><span class="pl-pds">))</span></span>
+<span class="pl-k">do</span>
+    t=<span class="pl-s"><span class="pl-pds">`</span>date +<span class="pl-s"><span class="pl-pds">'</span>%Y-%m-%d %H:%M:%S<span class="pl-pds">'</span></span><span class="pl-pds">`</span></span>
+    processnum=<span class="pl-s"><span class="pl-pds">`</span>ps aux <span class="pl-k">|</span> grep <span class="pl-s"><span class="pl-pds">"</span>www-data.*apache2<span class="pl-pds">"</span></span> <span class="pl-k">|</span> grep -v <span class="pl-s"><span class="pl-pds">"</span>grep<span class="pl-pds">"</span></span> <span class="pl-k">|</span> wc -l<span class="pl-pds">`</span></span>
+    threadnum=<span class="pl-s"><span class="pl-pds">`</span>ps auxH <span class="pl-k">|</span> grep <span class="pl-s"><span class="pl-pds">"</span>www-data.*apache2<span class="pl-pds">"</span></span> <span class="pl-k">|</span> grep -v <span class="pl-s"><span class="pl-pds">"</span>grep<span class="pl-pds">"</span></span> <span class="pl-k">|</span> wc -l<span class="pl-pds">`</span></span>
+    <span class="pl-c1">echo</span> <span class="pl-smi">$t</span> <span class="pl-smi">$processnum</span> <span class="pl-smi">$threadnum</span> <span class="pl-k">&gt;&gt;</span> log.txt
+    <span class="pl-c1">echo</span> <span class="pl-smi">$t</span> <span class="pl-smi">$processnum</span> <span class="pl-smi">$threadnum</span>
+    sleep 0.5
+<span class="pl-k">done</span>
+</pre></div>
+
+<ul>
+<li>用keepalive.py 可发起keepalive的请求；</li>
+</ul>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-c"># coding: utf8</span>
+<span class="pl-k">import</span> requests
+<span class="pl-k">import</span> time
+<span class="pl-k">import</span> sys
+url <span class="pl-k">=</span> sys.argv[<span class="pl-c1">1</span>]
+s <span class="pl-k">=</span> requests.Session()
+<span class="pl-c1">print</span> <span class="pl-s"><span class="pl-pds">"</span>get:<span class="pl-pds">"</span></span>, url
+r <span class="pl-k">=</span> s.get(url)
+<span class="pl-c1">print</span>(r.text)
+time.sleep(<span class="pl-c1">1000</span>)</pre></div>
+
+<ul>
+<li>用startmany.sh 可发起很多并发请求；</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c">#!/bin/bash</span>
+cnt=200
+<span class="pl-k">for</span> <span class="pl-s"><span class="pl-pds">((</span>i<span class="pl-k">=</span><span class="pl-c1">1</span>; i<span class="pl-k">&lt;=</span><span class="pl-smi">$cnt</span>; i<span class="pl-k">++</span><span class="pl-pds">))</span></span>
+<span class="pl-k">do</span>
+    wget -b  http://192.168.232.128:4000/sleep
+    <span class="pl-c"># python keepalive.py http://192.168.232.128:4000/hello  &amp;</span>
+<span class="pl-k">done</span>
+</pre></div>
+
+<ul>
+<li>wsgi是测试用的wsgi</li>
+</ul>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-c">#! /usr/bin/env python</span>
+<span class="pl-c"># -*- coding: utf-8 -*-</span>
+<span class="pl-k">import</span> time
+<span class="pl-k">from</span> flask <span class="pl-k">import</span> Flask
+app <span class="pl-k">=</span> Flask(<span class="pl-c1">__name__</span>)
+application <span class="pl-k">=</span> app
+<span class="pl-en">@app.route</span>(<span class="pl-s"><span class="pl-pds">"</span>/hello<span class="pl-pds">"</span></span>)
+<span class="pl-k">def</span> <span class="pl-en">hello</span>():<span class="pl-c"># 模拟快速的响应</span>
+    <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>
+
+<span class="pl-en">@app.route</span>(<span class="pl-s"><span class="pl-pds">"</span>/sleep<span class="pl-pds">"</span></span>)
+<span class="pl-k">def</span> <span class="pl-en">sleep</span>(): <span class="pl-c"># 模拟慢的响应</span>
+    time.sleep(<span class="pl-c1">20</span>)
+    <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>
+
+<span class="pl-en">@app.route</span>(<span class="pl-s"><span class="pl-pds">"</span>/download<span class="pl-pds">"</span></span>)
+<span class="pl-k">def</span> <span class="pl-en">download</span>(): <span class="pl-c"># 返回一个大文件方便测试客户端网络差的情况</span>
+    n <span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">"</span>/home/ltt/fastdfs/zipfiles/fastdfs-master.zip<span class="pl-pds">"</span></span>).read()
+
+<span class="pl-k">if</span> <span class="pl-c1">__name__</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">"</span>__main__<span class="pl-pds">"</span></span>:
+    run()
+</pre></div>
+
+<ul>
+<li>配置2个apache的VirtualHost，配置相同，只是端口不同(记得修改apache的access log的格式，增加处理时间的记录)</li>
+</ul>
+
+<pre><code>Listen 4000
+&lt;VirtualHost *:4000&gt;
+    DocumentRoot /home/ltt/test/cgi
+    &lt;Directory /&gt;
+        Options FollowSymLinks
+        AllowOverride None
+        Require all granted
+    &lt;/Directory&gt;
+    ErrorLog "/home/ltt/test/cgi/logs/apache-error.log"
+    CustomLog "/home/ltt/test/cgi/logs/apache-access.log" common
+    WSGIDaemonProcess test-domain processes=1 threads=3 python-eggs=/tmp/.python-eggs display-name=%{GROUP}
+    WSGIProcessGroup test-domain
+    WSGIApplicationGroup test-domain
+    WSGIScriptAlias / /home/ltt/test/cgi/wsgi
+&lt;/VirtualHost&gt;
+
+</code></pre>
+
+<ul>
+<li>用chrome浏览器的开发者工具，模拟客户端限制速度访问</li>
+</ul>
+
+<p>有了这些就可以模拟各种情况以确认上面的结论了。</p>
+</article></body></html>
